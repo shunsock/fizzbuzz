@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '../../app/**'
+      - 'app/**'
 
 jobs:
   validation:
