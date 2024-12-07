@@ -1,0 +1,16 @@
+version: 3
+
+tasks:
+  validate:
+    cmds:
+      - source .env
+      - uv run ruff check --fix app
+      - uv run ruff check --select I --fix app
+      - uv run mypy ./app
+      - uv run pytest .
+
+  run:
+    cmds:
+      - uv run python app/main.py
+    env:
+      PYTHONPATH: .
