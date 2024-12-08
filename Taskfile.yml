@@ -5,11 +5,14 @@ tasks:
     cmds:
       - uv run ruff check --fix app
       - uv run ruff check --select I --fix app
-      - uv run mypy ./app
-      - uv run pytest .
+      - uv run black .
+      - uv run mypy ./app --strict
+      - uv run coverage run -m pytest .
+      - uv run coverage report -m
 
   run:
     cmds:
-      - uv run python app/main.py
+      - uv run python app/main.py {{.CLI_ARGS}}
     env:
       PYTHONPATH: .
+    silent: true
