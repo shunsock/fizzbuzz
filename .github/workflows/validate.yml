@@ -20,7 +20,7 @@ jobs:
           enable-cache: true
 
       - name: Set up Python
-        run: uv python install 3.12.0 && uv python pin 3.12.0
+        run: uv python install 3.13.1 && uv python pin 3.13.1
 
       - name: Install dependencies
         run: uv sync --dev
