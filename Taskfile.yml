@@ -5,7 +5,7 @@ tasks:
     cmds:
       - uv run ruff check --fix app
       - uv run ruff check --select I --fix app
-      - uv run mypy ./app
+      - uv run mypy ./app --strict
       - uv run pytest .
 
   run:
