@@ -1,5 +1,4 @@
 import argparse
-import io
 
 from app.service.parser.parser_output import ParserOutput
 
@@ -29,15 +28,4 @@ class Parser:
     def parse(self) -> ParserOutput:
         return ParserOutput(
             namespace=self.parser.parse_args(),
-            help_message=self.get_print_help_as_string()
         )
-
-    def get_print_help_as_string(self) -> str:
-        # Create an in-memory file object
-        buffer = io.StringIO()
-
-        # Redirect print_help() output to the buffer
-        self.parser.print_help(file=buffer)
-
-        # Retrieve the content of the buffer as a string
-        return buffer.getvalue()
