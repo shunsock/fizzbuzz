@@ -9,6 +9,7 @@ def test_buzz_str():
     buzz = Buzz()
     assert str(buzz) == "Buzz", "The __str__ method should return 'Buzz'"
 
+
 def test_buzz_present(capsys):
     """
     Test the present method of the Buzz class.

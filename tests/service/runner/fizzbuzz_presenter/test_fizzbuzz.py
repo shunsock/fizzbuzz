@@ -9,6 +9,7 @@ def test_buzz_str():
     buzz = FizzBuzz()
     assert str(buzz) == "FizzBuzz", "The __str__ method should return 'FizzBuzz'"
 
+
 def test_buzz_present(capsys):
     """
     Test the present method of the FizzBuzz class.
@@ -17,4 +18,6 @@ def test_buzz_present(capsys):
     buzz = FizzBuzz()
     buzz.present()
     captured = capsys.readouterr()
-    assert captured.out.strip() == "FizzBuzz", "The present method should print 'FizzBuzz'"
+    assert (
+        captured.out.strip() == "FizzBuzz"
+    ), "The present method should print 'FizzBuzz'"
