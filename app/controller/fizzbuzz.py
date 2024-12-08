@@ -7,7 +7,6 @@ class FizzbuzzController:
         self.start = start
         self.end = end
 
-    def run(self) -> bool:
+    def run(self) -> None:
         runner = Runner(RunnerConfig(start=self.start, end=self.end))
         runner.run()
-        return True
