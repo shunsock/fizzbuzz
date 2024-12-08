@@ -14,3 +14,4 @@ tasks:
       - uv run python app/main.py {{.CLI_ARGS}}
     env:
       PYTHONPATH: .
+    silent: true

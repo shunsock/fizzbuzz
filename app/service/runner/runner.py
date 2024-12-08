@@ -7,6 +7,7 @@ class Runner:
         self.config = config
 
     def run(self) -> None:
+        """Run the fizzbuzz algorithm"""
         for i in range(self.config.start, self.config.end + 1):
             presenter = Selector.select(i)
             presenter.present()

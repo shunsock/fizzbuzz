@@ -5,8 +5,13 @@ from app.service.parser.parser_output import ParserOutput
 
 class Parser:
     def __init__(self) -> None:
+        """Initialize the parser
+
+        Note:
+            We define the command line arguments here
+        """
         parser = argparse.ArgumentParser(
-            description="This is a simple CLI app"
+            description="FizzBuzz CLI",
         )
 
         parser.add_argument(
@@ -26,6 +31,16 @@ class Parser:
         self.parser = parser
 
     def parse(self) -> ParserOutput:
+        """Parse the command line arguments
+
+        Returns:
+            ParserOutput: The parsed command line arguments
+
+        Note:
+            the parse_args() method also shows the help message when the user passes the -h flag
+        """
+        # Note: the parse_args() method also shows the help message when the user passes the -h flag
+        user_input = self.parser.parse_args()
         return ParserOutput(
-            namespace=self.parser.parse_args(),
+            namespace=user_input
         )

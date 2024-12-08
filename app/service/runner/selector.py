@@ -8,6 +8,14 @@ from app.service.runner.fizzbuzz_presenter.protocol import FizzBuzzPresenter
 class Selector:
     @staticmethod
     def select(count: int) -> FizzBuzzPresenter:
+        """Select the appropriate presenter based on the count
+
+        Args:
+            count: count of fizzbuzz
+
+        Returns:
+            FizzBuzzPresenter: presenter for fizzbuzz
+        """
         divisible_by_3 = count % 3 == 0
         divisible_by_5 = count % 5 == 0
 
