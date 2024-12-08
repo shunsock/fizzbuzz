@@ -15,10 +15,7 @@ class Parser:
         )
 
         parser.add_argument(
-            "--start",
-            type=int,
-            default=1,
-            help="The start of the FizzBuzz sequence"
+            "--start", type=int, default=1, help="The start of the FizzBuzz sequence"
         )
 
         parser.add_argument(
@@ -41,6 +38,4 @@ class Parser:
         """
         # Note: the parse_args() method also shows the help message when the user passes the -h flag
         user_input = self.parser.parse_args()
-        return ParserOutput(
-            namespace=user_input
-        )
+        return ParserOutput(namespace=user_input)

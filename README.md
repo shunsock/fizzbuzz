@@ -15,9 +15,9 @@ cd fizzbuzz
 # @see: https://github.com/astral-sh/uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# Install Python 3.12.0
-uv python install 3.12.0
-uv python pin 3.12.0
+# Install Python 3.13.1
+uv python install 3.13.1
+uv python pin 3.13.1
 
 # Install the dependencies
 uv sync

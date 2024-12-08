@@ -10,6 +10,5 @@ class Router:
     @staticmethod
     def route(user_input: ParserOutput) -> ControllerProtocol:
         return FizzbuzzController(
-            start = user_input.namespace.start,
-            end = user_input.namespace.end
+            start=user_input.namespace.start, end=user_input.namespace.end
         )

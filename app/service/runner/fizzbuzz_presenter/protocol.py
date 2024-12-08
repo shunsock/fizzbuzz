@@ -22,6 +22,7 @@ class FizzBuzzPresenter(Protocol):
             return "Something"
     ```
     """
+
     def __str__(self) -> str:
         pass
 
