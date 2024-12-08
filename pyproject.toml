@@ -10,6 +10,7 @@ dependencies = [
 
 [tool.uv]
 dev-dependencies = [
+    "coverage>=7.6.9",
     "mypy>=1.13.0",
     "pytest>=8.3.4",
     "ruff>=0.8.2",
@@ -24,3 +25,8 @@ ignore = []
 
 [tool.ruff.lint.isort]
 force-sort-within-sections = true
+
+[tool.coverage.run]
+omit = [
+    "./tests/*",
+]
