@@ -10,6 +10,8 @@ updates:
       interval: "monthly"
     allow:
       - dependency-name: "pydantic"
+    ignore:
+      - dependency-name: "pydantic"
         update-types:
-          - "version-update:semver-major"
-          - "version-update:semver-minor"
+          - "version-update:semver-patch"
+
