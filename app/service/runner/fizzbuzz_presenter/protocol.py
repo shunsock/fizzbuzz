@@ -25,4 +25,3 @@ class FizzBuzzPresenter(Protocol):
 
     def present(self) -> None:
         pass
-
