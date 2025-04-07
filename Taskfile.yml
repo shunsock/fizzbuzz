@@ -12,7 +12,4 @@ tasks:
 
   run:
     cmds:
-      - uv run python app/main.py {{.CLI_ARGS}}
-    env:
-      PYTHONPATH: .
-    silent: true
+      - uv run python -m app.main {{.CLI_ARGS}}

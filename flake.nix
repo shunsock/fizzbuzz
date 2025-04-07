@@ -13,8 +13,9 @@
       in {
         devShell = pkgs.mkShell {
           buildInputs = [
-            pkgs.uv
+            pkgs.go-task
             pkgs.python313
+            pkgs.uv
           ];
           shellHook = ''
             echo "uv version: $(uv --version)"
