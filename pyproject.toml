@@ -5,7 +5,7 @@ description = "simple fizzbuzz cli"
 readme = "README.md"
 requires-python = ">=3.12.6"
 dependencies = [
-    "pydantic>=2.10.3",
+    "pydantic>=2.13.3",
 ]
 
 [tool.uv]
